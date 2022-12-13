@@ -1,13 +1,27 @@
+// dependecias
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+} from "react-router-dom";
+
+// modulos de archivo
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// recursos varios
+import './index.css';
+import CharRoute from './components/containers/CharRoute/CharRoute';
+import router from './modules/routes';
+
+
+// Lo mas limpio posible
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
